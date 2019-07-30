@@ -1,8 +1,8 @@
 {
-  "name": "map-computed",
+  "name": "map-computeds",
   "version": "1.0.0",
   "description": "A lib to generate on-demand computeds for VueJs applications",
-  "main": "map-props/index.js",
+  "main": "map-computeds/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon --exec babel-node map-props/index.js"

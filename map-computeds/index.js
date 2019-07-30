@@ -11,10 +11,8 @@ export const mapComputeds = function (computedNames) {
 
     acc = {
       ...acc,
-      [elm]: {
-        // eslint-disable-next-line
-        ...globalThis.vm['_globalComputed'][elm]
-      }
+      // eslint-disable-next-line
+      [elm]: globalThis.vm['_globalComputed'][elm]
     }
     return acc
   }, {})
