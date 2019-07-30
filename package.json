@@ -4,7 +4,7 @@
   "description": "A lib to generate on-demand computeds for VueJs applications",
   "main": "map-computeds/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "start": "nodemon --exec babel-node map-props/index.js"
   },
   "repository": {
@@ -21,6 +21,13 @@
     "@vue/eslint-config-standard": "^3.0.5",
     "babel-eslint": "^10.0.1",
     "eslint": "^5.7.0",
-    "eslint-plugin-vue": "^4.7.1"
+    "eslint-plugin-vue": "^4.7.1",
+    "jest": "^24.8.0"
+  },
+  "dependencies": {
+    "@babel/core": "^7.5.5",
+    "@babel/node": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "babel-jest": "^24.8.0"
   }
 }

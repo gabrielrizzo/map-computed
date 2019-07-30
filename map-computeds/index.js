@@ -1,3 +1,9 @@
+// for testing purpouse
+// import mixin from '../propsExample'
+// const { computed } = mixin
+// const globalThis = { vm: {} }
+// globalThis.vm['_globalComputed'] = computed
+
 export const mapComputeds = function (computedNames) {
   if (!Array.isArray(computedNames)) {
     throw new Error('Import module must be an Array')
