@@ -1,4 +1,4 @@
-# map-computeds
+# MapComputeds
 A lib to generate on-demand computed for VueJs components
 
 Why should I use this lib? 
@@ -11,51 +11,73 @@ First, you need to create an file to be your source, with the computeds you want
 ```
 export default {
     computed: {
-        takeWidth () {
-          let splittedWidth = this.width.split('')
-          if (splittedWidth.indexOf('%') !== -1) {
-            return { width: `${this.width}` }
-          }
-          return { width: `${this.width}px` }
+        takeWidth() {
+            let splittedWidth = this.width.split('')
+            if (splittedWidth.indexOf('%') !== -1) {
+                return {
+                    width: `${this.width}`
+                }
+            }
+            return {
+                width: `${this.width}px`
+            }
         },
-        takeHeight () {
-          let splittedHeight = this.height.split('')
-          if (splittedHeight.indexOf('%') !== -1) {
-            return { height: `${this.height}` }
-          }
-          return { height: `${this.height}px` }
+        takeHeight() {
+            let splittedHeight = this.height.split('')
+            if (splittedHeight.indexOf('%') !== -1) {
+                return {
+                    height: `${this.height}`
+                }
+            }
+            return {
+                height: `${this.height}px`
+            }
         },
-        takeFontSize () {
-          return { fontSize: `${this.fontSize}px` }
+        takeFontSize() {
+            return {
+                fontSize: `${this.fontSize}px`
+            }
         },
-        takeFontColor () {
-          return { color: `${this.fontColor}` }
+        takeFontColor() {
+            return {
+                color: `${this.fontColor}`
+            }
         },
-        takeBackgroundColor () {
-          return { backgroundColor: `${this.backgroundColor}` }
+        takeBackgroundColor() {
+            return {
+                backgroundColor: `${this.backgroundColor}`
+            }
         },
-        takeBorderRadius () {
-          return { borderRadius: `${this.borderRadius}` }
+        takeBorderRadius() {
+            return {
+                borderRadius: `${this.borderRadius}`
+            }
         },
-        takeBorderStyle () {
-          return { borderStyle: `${this.borderStyle}` }
+        takeBorderStyle() {
+            return {
+                borderStyle: `${this.borderStyle}`
+            }
         },
-        takeBorderColor () {
-          return { borderColor: `${this.borderColor}` }
+        takeBorderColor() {
+            return {
+                borderColor: `${this.borderColor}`
+            }
         },
-        takePadding () {
-          return { padding: `${this.padding}` }
+        takePadding() {
+            return {
+                padding: `${this.padding}`
+            }
         },
-        takePositionAbsolute () {
-          if (!this.isPositionAbsolute) {
-            return {}
-          }
-          return {
-            top: `${this.top}`,
-            left: `${this.left}`
-          }
+        takePositionAbsolute() {
+            if (!this.isPositionAbsolute) {
+                return {}
+            }
+            return {
+                top: `${this.top}`,
+                left: `${this.left}`
+            }
+        }
     }
-  }
 }
 ```
 then, you need to import it on main.js and register the lib plugin like that
@@ -73,5 +95,5 @@ computed: {
  }
 ```
 
-To upgrade this lib to it's full potencial, consider using map-props :)
+To upgrade this lib to it's full potencial, consider using mapProps :)
 https://github.com/gabrielrizzo/map-prop
